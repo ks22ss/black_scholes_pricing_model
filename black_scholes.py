@@ -21,7 +21,7 @@ def calculate_call_price(S, K, T, r, sigma):
     Returns:
     float: Call option price
     """
-    if T <= 0:
+    if T <= 0 or sigma <= 0:
         return max(S - K, 0)
     
     d1 = (np.log(S / K) + (r + 0.5 * sigma ** 2) * T) / (sigma * np.sqrt(T))

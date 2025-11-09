@@ -88,7 +88,7 @@ def render_sidebar():
             "Min Spot Price",
             min_value=0.01,
             max_value=500.0,
-            value=max(0.01, current_asset_price * 0.5),
+            value=80.0,
             step=0.01,
             format="%.2f"
         )
@@ -97,7 +97,7 @@ def render_sidebar():
             "Max Spot Price",
             min_value=0.01,
             max_value=500.0,
-            value=max(current_asset_price * 1.5, min_spot_price + 1.0),
+            value=120.0,
             step=0.01,
             format="%.2f"
         )
@@ -107,7 +107,7 @@ def render_sidebar():
             "Min Volatility",
             min_value=0.0,
             max_value=1.0,
-            value=0.0,
+            value=0.04,
             step=0.01,
             format="%.2f"
         )
@@ -116,7 +116,7 @@ def render_sidebar():
             "Max Volatility",
             min_value=0.0,
             max_value=1.0,
-            value=1.0,
+            value=0.30,
             step=0.01,
             format="%.2f"
         )

@@ -17,7 +17,7 @@ def init_database(db_path='options.db'):
     Returns:
     sqlite3.Connection: Database connection
     """
-    conn = sqlite3.connect(db_path)
+    conn = sqlite3.connect(db_path, check_same_thread=False)
     # Enable foreign key constraints
     conn.execute("PRAGMA foreign_keys = ON")
     cursor = conn.cursor()
